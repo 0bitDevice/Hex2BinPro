@@ -1,0 +1,7 @@
+LIBRARY
+EXPORTS
+	readHexFmtTagNum
+	readHexFmtTagContent
+	convertHex2Bin
+	HexFmt2AddrBin
+	testStrPtr

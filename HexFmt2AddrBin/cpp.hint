@@ -1,0 +1,2 @@
+﻿#define HEXFMT2ADDRBIN_API __declspec(dllexport)
+#define HEXFMT2ADDRBIN_API __declspec(dllimport)
