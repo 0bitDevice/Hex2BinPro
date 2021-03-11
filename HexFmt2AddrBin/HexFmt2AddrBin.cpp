@@ -298,7 +298,7 @@ unsigned int FillHexTag(ihexfmt_Data *DstCb, unsigned int Dst_Length, const ihex
 					DstCb[IndexDstCb].record_addr = record_addr;
 					DstCb[IndexDstCb].upper_addr = SrcCb[i].upper_addr;
 					byteArrayCat(&(DstCb[IndexDstCb].data[IndexDstData]), SrcCb[i].byte_count - byteCounterLeft, &(SrcCb[i].data[byteCounterLeft]));
-					IndexDstData += SrcCb[i].byte_count;
+					IndexDstData += (SrcCb[i].byte_count - byteCounterLeft);
 				}
 				else
 				{
