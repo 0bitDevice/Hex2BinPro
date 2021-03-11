@@ -395,7 +395,7 @@ unsigned int FillHexTag(ihexfmt_Data *DstCb, unsigned int Dst_Length, const ihex
 					DstCb[IndexDstCb].record_addr = record_addr;
 					DstCb[IndexDstCb].upper_addr = SrcCb[i].upper_addr;
 					byteArrayCat(&(DstCb[IndexDstCb].data[IndexDstData]), SrcCb[i].byte_count - byteCounterLeft, &(SrcCb[i].data[byteCounterLeft]));
-					IndexDstData += SrcCb[i].byte_count;
+					IndexDstData += (SrcCb[i].byte_count - byteCounterLeft);
 				}
 				else
 				{
@@ -430,7 +430,7 @@ int ConvertMap(ihexfmt_Data *cb, unsigned int length, char* dataArray, unsigned 
 
 	while (length--)
 	{ 
-		//¼ÆËãµØÖ·
+		//Â¼Ã†Ã‹Ã£ÂµÃ˜Ã–Â·
 		dataAddr = (cb[i].upper_addr << 16) + cb[i].record_addr;
 		sprintf_s(&dataArray[indexArray], 9, "%x", dataAddr);
 		indexArray += 8;
