@@ -431,7 +431,7 @@ int ConvertMap(ihexfmt_Data *cb, unsigned int length, char* dataArray, unsigned 
 	while (length--)
 	{ 
 		//¼ÆËãµØÖ·
-		dataAddr = (cb[i].upper_addr << 16) + cb[i].record_addr;
+		dataAddr = (cb[i].upper_addr << 16) + （cb[i].record_addr&0xffff）;
 		sprintf_s(&dataArray[indexArray], 9, "%x", dataAddr);
 		indexArray += 8;
 		dataArray[indexArray++] = '\n';
